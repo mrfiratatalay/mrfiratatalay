@@ -26,18 +26,18 @@ I build backend systems that keep their data correct under real-world pressure:<
 
 <br>
 
-Merhaba, ben Fırat. Recep Tayyip Erdoğan Üniversitesi Bilgisayar Mühendisliği mezunuyum ve Konya'da yaşıyorum.
+Merhaba, ben Fırat Atalay. Recep Tayyip Erdoğan Üniversitesi Bilgisayar Mühendisliği mezunuyum ve Konya'da yaşıyorum.
 **Java/Spring Boot** ve **C#/ASP.NET Core** ile backend geliştiriyorum. En çok verinin her koşulda doğru kalmasını
 önemsiyorum: aynı anda gelen istekler, birbirinden ayrılması gereken firmalar, çöken servisler.
 
 - 🏆 Turkcell Code Night Trabzon'da **takım kaptanı** olarak birincilik ve All-Star finalistliği
-- 🎓 **TÜBİTAK 2209-A** desteği alan bitirme projesi: EduConnect
+- 🎓 **TÜBİTAK 2209-A** desteği alan bitirme projemiz EduConnect: Ayşe Mandıralı ile geliştirdik, takım kaptanı bendim
 - 💼 **Elasoft**'ta yaz stajı ve ardından bir dönemlik uzun dönem staj; pull request'ler ve kıdemli mühendislerden kod incelemesi
 - ✍️ **Medium**'da Huawei Developer ve Stackademic yayınlarında yer alan İngilizce teknik yazılar
 
-Öne çıkan üç projem **Constructor ERP**, **Turkcell SkillHub** ve **ZekAI** canlı demo olarak yayında; kayıt ya da
-şifre gerekmeden denenebilir. Her birinin reposunda kararları gerekçeleriyle anlatan bir `docs` klasörü var. Tüm
-projelerimin ayrıntılı anlatımı [portfolyomda](https://mrfiratatalay.github.io). Java/Spring Boot ya da
+Öne çıkan dört projem **Constructor ERP**, **Turkcell SkillHub**, **ZekAI** ve **EduConnect** canlı demo olarak
+yayında; kayıt ya da şifre gerekmeden denenebilir. Her birinin reposunda kararları gerekçeleriyle anlatan bir `docs`
+klasörü var. Tüm projelerimin ayrıntılı anlatımı [portfolyomda](https://mrfiratatalay.github.io). Java/Spring Boot ya da
 C#/ASP.NET Core ile **backend rollerine açığım**: [e-posta](mailto:firatatalay.cs@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/f%C4%B1rat-atalay-2581142b6/) · [CV](https://mrfiratatalay.github.io/cv/firat-atalay.pdf)
 
@@ -45,7 +45,7 @@ C#/ASP.NET Core ile **backend rollerine açığım**: [e-posta](mailto:firatatal
 
 ## Flagship projects
 
-All three run as live demos with no sign-up and no password, and each repository has a docs folder that explains
+All four run as live demos with no sign-up and no password, and each repository has a docs folder that explains
 every decision along with its trade-offs.
 
 <table>
@@ -105,6 +105,25 @@ An AI decision platform for both sides of e-commerce, built in six days at HackA
 <a href="https://mrfiratatalay.github.io/en/projects/zekai/">Case study</a>
 </td>
 </tr>
+<tr>
+<td width="54%">
+<h3>EduConnect</h3>
+Our TÜBİTAK 2209-A funded graduation thesis: an AI-assisted campus platform that Ayşe Mandıralı and I built, with me
+as team captain.
+<ul>
+<li>A BERTurk model we fine-tuned routes each question to a 412-entry knowledge base; every answer shows its source.</li>
+<li>The database settles races: refresh tokens rotate in one atomic UPDATE, and unique indexes stop double likes.</li>
+<li>When the free database expired, I built a browser-side demo of the real API; the production build has none of it.</li>
+</ul>
+<b>ASP.NET Core 10 · PostgreSQL · BERTurk · React 19</b><br>
+<a href="https://educonnect-tez.vercel.app">Live demo</a> ·
+<a href="https://github.com/mrfiratatalay/educonnect-backend">Code</a> ·
+<a href="https://mrfiratatalay.github.io/en/projects/educonnect/">Case study</a>
+</td>
+<td width="46%">
+<a href="https://educonnect-tez.vercel.app"><img src="https://mrfiratatalay.github.io/images/projects/educonnect/kapak.webp" alt="EduConnect: the personalized feed on the desktop and EduAI answering with its source on a phone" /></a>
+</td>
+</tr>
 </table>
 
 ## More projects
@@ -116,11 +135,8 @@ outbox and inbox, role-based authorization, real-time notifications, and a fallb
 AI service is down. `ASP.NET Core 10` `RabbitMQ` `FastAPI` `PostgreSQL` ·
 [Case study](https://mrfiratatalay.github.io/en/projects/fraudcell/)
 
-**[EduConnect](https://github.com/mrfiratatalay/educonnect-backend)** · *TÜBİTAK 2209-A funded capstone*<br>
-A university platform for social interaction, academic collaboration, a student marketplace and AI-assisted access to
-university information. **My part:** fixed refresh-token and registration race conditions, moved search work into SQL,
-validated file uploads, migrated the data layer to PostgreSQL and containerized the services.
-`ASP.NET Core 10` `EF Core` `PostgreSQL` `React` · [Case study](https://mrfiratatalay.github.io/en/projects/educonnect/)
+Every project, with its story, screenshots and the reasoning behind each decision, is on
+[my portfolio](https://mrfiratatalay.github.io/en/projects/).
 
 ## How I work
 
@@ -143,7 +159,8 @@ validated file uploads, migrated the data layer to PostgreSQL and containerized 
 | **Tooling** | <img src="https://skillicons.dev/icons?i=docker,git,github,postman" height="40" alt="Docker, Git, GitHub, Postman" /> |
 
 **Also:** Entity Framework Core · Spring Security & JWT · Flyway · Microsoft SQL Server · YARP · Swagger/OpenAPI ·
-Docker Compose · Server-Sent Events · Gemini and Claude APIs · xUnit · Testcontainers
+Docker Compose · Server-Sent Events · SignalR · Gemini and Claude APIs · Hugging Face Transformers · xUnit ·
+Testcontainers
 
 **Practices:** REST API design · layered and clean architecture · CQRS · role-based access control · multi-tenancy ·
 event-driven messaging with outbox/inbox · LLM integration with structured output and fallbacks
