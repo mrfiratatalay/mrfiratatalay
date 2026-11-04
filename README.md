@@ -35,8 +35,9 @@ Merhaba, ben Fırat. Recep Tayyip Erdoğan Üniversitesi Bilgisayar Mühendisli�
 - 💼 **Elasoft**'ta yaz stajı ve ardından bir dönemlik uzun dönem staj; pull request'ler ve kıdemli mühendislerden kod incelemesi
 - ✍️ **Medium**'da Huawei Developer ve Stackademic yayınlarında yer alan İngilizce teknik yazılar
 
-İki öne çıkan projem **Constructor ERP** ve **Turkcell SkillHub** canlı demo olarak yayında; kayıt gerekmeden denenebilir.
-Tüm projelerimin ayrıntılı anlatımı [portfolyomda](https://mrfiratatalay.github.io). Java/Spring Boot ya da
+Öne çıkan üç projem **Constructor ERP**, **Turkcell SkillHub** ve **ZekAI** canlı demo olarak yayında; kayıt ya da
+şifre gerekmeden denenebilir. Her birinin reposunda kararları gerekçeleriyle anlatan bir `docs` klasörü var. Tüm
+projelerimin ayrıntılı anlatımı [portfolyomda](https://mrfiratatalay.github.io). Java/Spring Boot ya da
 C#/ASP.NET Core ile **backend rollerine açığım**: [e-posta](mailto:firatatalay.cs@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/f%C4%B1rat-atalay-2581142b6/) · [CV](https://mrfiratatalay.github.io/cv/firat-atalay.pdf)
 
@@ -44,39 +45,64 @@ C#/ASP.NET Core ile **backend rollerine açığım**: [e-posta](mailto:firatatal
 
 ## Flagship projects
 
-Both run as live demos that need no sign-up, and both start locally with one Docker command.
+All three run as live demos with no sign-up and no password, and each repository has a docs folder that explains
+every decision along with its trade-offs.
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="46%">
 <a href="https://iskeleerp.vercel.app/demo"><img src="https://mrfiratatalay.github.io/images/projects/constructor-erp/kapak.webp" alt="Constructor ERP: subcontractor progress on the desktop and a site chat on the phone" /></a>
+</td>
+<td width="54%">
 <h3>Constructor ERP</h3>
-A multi-tenant SaaS that lets contractors run their construction sites from one place instead of WhatsApp groups.
-I was the product owner and a full-stack developer in a two-person team.
+A multi-tenant SaaS that replaces WhatsApp groups for running construction sites. Product owner and full-stack
+developer in a team of two.
 <ul>
-<li>Tenant data isolated twice: service filters plus PostgreSQL row-level security. The app refuses to start if a table is left unprotected.</li>
-<li>Server-side sessions, so a removed user is signed out instantly; only a SHA-256 hash of each token is stored.</li>
-<li>File and function size limits enforced at build time. I cut one module's backend from 3,622 to 2,336 lines.</li>
+<li>PostgreSQL row-level security on top of service filters; the app refuses to start if a table is unprotected.</li>
+<li>Server-side sessions that end instantly; only SHA-256 hashes of tokens are stored.</li>
+<li>Build-enforced size limits; one module's backend went from 3,622 to 2,336 lines.</li>
 </ul>
-<b>Java 25 · Spring Boot 4 · PostgreSQL · Vue 3 · Docker</b><br>
-<a href="https://iskeleerp.vercel.app/demo">Live demo</a> (5 roles, no password) ·
+<b>Java 25 · Spring Boot 4 · PostgreSQL · Vue 3</b><br>
+<a href="https://iskeleerp.vercel.app/demo">Live demo</a> ·
 <a href="https://github.com/mrfiratatalay/constructor-erp">Code</a> ·
 <a href="https://mrfiratatalay.github.io/en/projects/constructor-erp/">Case study</a>
 </td>
-<td width="50%" valign="top">
-<a href="https://skillhub-turkcell.vercel.app"><img src="https://mrfiratatalay.github.io/images/projects/turkcell-skillhub/kapak.webp" alt="Turkcell SkillHub: the sky map and the Night Clock on the desktop and on a phone" /></a>
+</tr>
+<tr>
+<td width="54%">
 <h3>Turkcell SkillHub 🏆</h3>
-A gamified digital skills platform. As team captain, I led us to 1st place with it at Turkcell Code Night
-Trabzon, then rewrote it from scratch with a clean, layered backend.
+A gamified skills platform that won 1st place at Turkcell Code Night Trabzon with me as team captain, then
+rewritten from scratch.
 <ul>
-<li>XP is an append-only ledger; totals and rankings are derived with SQL window functions, so no score can drift.</li>
-<li>Quizzes are graded on the server in one transaction with a row lock, so a double submission cannot pay XP twice.</li>
-<li>AI suggestions from Claude are validated against the learner's real data, with a rule-based fallback.</li>
+<li>XP is an append-only ledger; rankings are derived with SQL window functions, so no score can drift.</li>
+<li>Quizzes are graded on the server in one locked transaction, so a double submission pays nothing.</li>
+<li>Claude's suggestions are checked against the learner's real progress, with a rule-based fallback.</li>
 </ul>
-<b>Java 25 · Spring Boot 4 · PostgreSQL · React 19 · Docker</b><br>
-<a href="https://skillhub-turkcell.vercel.app">Live demo</a> (one click) ·
+<b>Java 25 · Spring Boot 4 · PostgreSQL · React 19</b><br>
+<a href="https://skillhub-turkcell.vercel.app">Live demo</a> ·
 <a href="https://github.com/mrfiratatalay/Turkcell-Skillhub">Code</a> ·
 <a href="https://mrfiratatalay.github.io/en/projects/turkcell-skillhub/">Case study</a>
+</td>
+<td width="46%">
+<a href="https://skillhub-turkcell.vercel.app"><img src="https://mrfiratatalay.github.io/images/projects/turkcell-skillhub/kapak.webp" alt="Turkcell SkillHub: the sky map and the Night Clock on the desktop and on a phone" /></a>
+</td>
+</tr>
+<tr>
+<td width="46%">
+<a href="https://zekai-platformm.vercel.app/login"><img src="https://mrfiratatalay.github.io/images/projects/zekai/kapak.webp" alt="ZekAI: the customer simulation on the desktop and an analysis verdict on a phone" /></a>
+</td>
+<td width="54%">
+<h3>ZekAI</h3>
+An AI decision platform for both sides of e-commerce, built in six days at HackAthon'26 with me as team captain.
+<ul>
+<li>Gemini only scores and cites reviews; a pure rule engine makes the purchase call.</li>
+<li>One structured call instead of seven agents; results cached by product fingerprint.</li>
+<li>We also built the marketplace; one auth scheme takes JWTs and seller API keys.</li>
+</ul>
+<b>ASP.NET Core 10 · FastAPI · Gemini · Next.js 16</b><br>
+<a href="https://zekai-platformm.vercel.app/login">Live demo</a> ·
+<a href="https://github.com/mrfiratatalay/btk-zekai">Code</a> ·
+<a href="https://mrfiratatalay.github.io/en/projects/zekai/">Case study</a>
 </td>
 </tr>
 </table>
@@ -90,12 +116,6 @@ outbox and inbox, role-based authorization, real-time notifications, and a fallb
 AI service is down. `ASP.NET Core 10` `RabbitMQ` `FastAPI` `PostgreSQL` ·
 [Case study](https://mrfiratatalay.github.io/en/projects/fraudcell/)
 
-**[ZekAI](https://github.com/mrfiratatalay/btk-zekai)** · *HackAthon'26, BTK Akademi × Google × Girişimcilik Vakfı*<br>
-An AI-assisted e-commerce decision platform: two Next.js apps, ASP.NET Core APIs and a FastAPI AI service built on
-Gemini. **My part:** seller and buyer workflows for product content, feedback analysis and product comparison, with AI
-responses streamed over Server-Sent Events. `ASP.NET Core 10` `Next.js` `FastAPI` `Gemini` ·
-[Case study](https://mrfiratatalay.github.io/en/projects/zekai/)
-
 **[EduConnect](https://github.com/mrfiratatalay/educonnect-backend)** · *TÜBİTAK 2209-A funded capstone*<br>
 A university platform for social interaction, academic collaboration, a student marketplace and AI-assisted access to
 university information. **My part:** fixed refresh-token and registration race conditions, moved search work into SQL,
@@ -107,7 +127,10 @@ validated file uploads, migrated the data layer to PostgreSQL and containerized 
 - **One source of truth.** I derive numbers from records instead of copying them into counters that drift.
 - **Let the database guard the rules.** Row-level security, partial unique indexes and constraints back up the code.
 - **Plan for races.** Row locks against double submissions; a sign-up race ends in a clean `409`, not a `500`.
-- **Fail soft.** When an AI model or a downstream service fails, a deterministic fallback keeps the product working.
+- **Models advise, code decides.** An LLM returns scores and evidence; deterministic rules make the final call, so
+  the same input always gets the same, explainable answer.
+- **Fail soft, and say so.** When a model or a downstream service fails, a fallback keeps the product working and
+  the screen tells the user.
 - **Make it reviewable.** Pull requests and code review, rules enforced by the build, and docs that explain every trade-off.
 
 ## Tech stack
@@ -120,10 +143,10 @@ validated file uploads, migrated the data layer to PostgreSQL and containerized 
 | **Tooling** | <img src="https://skillicons.dev/icons?i=docker,git,github,postman" height="40" alt="Docker, Git, GitHub, Postman" /> |
 
 **Also:** Entity Framework Core · Spring Security & JWT · Flyway · Microsoft SQL Server · YARP · Swagger/OpenAPI ·
-Docker Compose · xUnit · Testcontainers
+Docker Compose · Server-Sent Events · Gemini and Claude APIs · xUnit · Testcontainers
 
 **Practices:** REST API design · layered and clean architecture · CQRS · role-based access control · multi-tenancy ·
-event-driven messaging with outbox/inbox
+event-driven messaging with outbox/inbox · LLM integration with structured output and fallbacks
 
 ## Experience
 
