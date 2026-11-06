@@ -35,8 +35,8 @@ Merhaba, ben Fırat Atalay. Recep Tayyip Erdoğan Üniversitesi Bilgisayar Mühe
 - 💼 **Elasoft**'ta yaz stajı ve ardından bir dönemlik uzun dönem staj; pull request'ler ve kıdemli mühendislerden kod incelemesi
 - ✍️ **Medium**'da Huawei Developer ve Stackademic yayınlarında yer alan İngilizce teknik yazılar
 
-Öne çıkan dört projem **Constructor ERP**, **Turkcell SkillHub**, **ZekAI** ve **EduConnect** canlı demo olarak
-yayında; kayıt ya da şifre gerekmeden denenebilir. Her birinin reposunda kararları gerekçeleriyle anlatan bir `docs`
+Öne çıkan beş projem **Constructor ERP**, **Turkcell SkillHub**, **ZekAI**, **EduConnect** ve **FraudCell** canlı
+demo olarak yayında; kayıt ya da şifre gerekmeden denenebilir. Her birinin reposunda kararları gerekçeleriyle anlatan bir `docs`
 klasörü var. Tüm projelerimin ayrıntılı anlatımı [portfolyomda](https://mrfiratatalay.github.io). Java/Spring Boot ya da
 C#/ASP.NET Core ile **backend rollerine açığım**: [e-posta](mailto:firatatalay.cs@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/f%C4%B1rat-atalay-2581142b6/) · [CV](https://mrfiratatalay.github.io/cv/firat-atalay.pdf)
@@ -45,7 +45,7 @@ C#/ASP.NET Core ile **backend rollerine açığım**: [e-posta](mailto:firatatal
 
 ## Flagship projects
 
-All four run as live demos with no sign-up and no password, and each repository has a docs folder that explains
+All five run as live demos with no sign-up and no password, and each repository has a docs folder that explains
 every decision along with its trade-offs.
 
 <table>
@@ -124,16 +124,26 @@ as team captain.
 <a href="https://educonnect-tez.vercel.app"><img src="https://mrfiratatalay.github.io/images/projects/educonnect/kapak.webp" alt="EduConnect: the personalized feed on the desktop and EduAI answering with its source on a phone" /></a>
 </td>
 </tr>
+<tr>
+<td width="46%">
+<a href="https://fraud-cell.vercel.app"><img src="https://mrfiratatalay.github.io/images/projects/fraudcell/kapak.webp" alt="FraudCell: the analyst's case workspace on the desktop and the customer's home page on a phone" /></a>
+</td>
+<td width="54%">
+<h3>FraudCell</h3>
+A fraud operations platform built overnight at the Turkcell Code Night 2026 All-Star final with me as team captain,
+then completed into a real microservice system.
+<ul>
+<li>Six services with a PostgreSQL each; RabbitMQ with a transactional outbox and inbox, so no event is lost or applied twice.</li>
+<li>When the AI service is down, the payment is still recorded and goes to a manual queue; CI proves it by stopping the container.</li>
+<li>Every pull request boots the whole stack on a clean machine and runs 96 security checks and a four-role browser test.</li>
+</ul>
+<b>.NET 10 · RabbitMQ · FastAPI · React 19</b><br>
+<a href="https://fraud-cell.vercel.app">Live demo</a> ·
+<a href="https://github.com/mrfiratatalay/FraudCell">Code</a> ·
+<a href="https://mrfiratatalay.github.io/en/projects/fraudcell/">Case study</a>
+</td>
+</tr>
 </table>
-
-## More projects
-
-**[FraudCell](https://github.com/mrfiratatalay/FraudCell)** · *Turkcell Code Night 2026 All-Star final*<br>
-An event-driven fraud operations platform: Identity, Transaction, AI and Gamification services behind a YARP gateway,
-each with its own PostgreSQL database, talking over RabbitMQ. **My part:** transaction assessment with a transactional
-outbox and inbox, role-based authorization, real-time notifications, and a fallback that keeps intake running when the
-AI service is down. `ASP.NET Core 10` `RabbitMQ` `FastAPI` `PostgreSQL` ·
-[Case study](https://mrfiratatalay.github.io/en/projects/fraudcell/)
 
 Every project, with its story, screenshots and the reasoning behind each decision, is on
 [my portfolio](https://mrfiratatalay.github.io/en/projects/).
@@ -160,7 +170,7 @@ Every project, with its story, screenshots and the reasoning behind each decisio
 
 **Also:** Entity Framework Core · Spring Security & JWT · Flyway · Microsoft SQL Server · YARP · Swagger/OpenAPI ·
 Docker Compose · Server-Sent Events · SignalR · Gemini and Claude APIs · Hugging Face Transformers · xUnit ·
-Testcontainers
+Testcontainers · Playwright · GitHub Actions
 
 **Practices:** REST API design · layered and clean architecture · CQRS · role-based access control · multi-tenancy ·
 event-driven messaging with outbox/inbox · LLM integration with structured output and fallbacks
